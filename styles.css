@@ -8,6 +8,7 @@ body {
 
 .exc-head {
   text-align: center;
+  padding-bottom: 1vh;
 }
 
 .exc-h1 {
@@ -18,6 +19,19 @@ body {
 .exc-h2 {
   color: #777777;
   font-size: clamp(1.5rem, 1.5rem, 1.5rem);
+}
+
+.exc-info {
+  background-color: #533535;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.exc-text {
+  font-size: clamp(1.25rem, 1.25rem, 1.25rem);
+  color: #757575;
 }
 
 ul.exc-inline {
