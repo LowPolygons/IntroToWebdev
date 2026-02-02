@@ -1,24 +1,65 @@
 body {
-  background-color: #232323;
+  background-image: url(https://excision.ca/wp-content/uploads/2023/12/Excision_Tour_Dates.jpg);
+  background-position: center;
 }
 
 .Excision {
-  background-color: #433434;
+  background-color: #c33c3c88;
 }
 
 .exc-head {
+  text-align: center; 
+  padding-bottom: 4vh;
+  padding-top: 4vh;
+}
+
+.exc-separators {
+  margin-bottom: 1.25vh;
+  margin-top: 1.25vh;
+}
+
+.exc-nav {
+  background-color: #741313bb;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   text-align: center;
-  padding-bottom: 1vh;
+  width: 100vw;
 }
 
 .exc-h1 {
-  color: #888888;
-  font-size: clamp(3rem, 3rem, 3rem);
+  color: #DDD;
+  font-size: clamp(3rem, 5rem, 6rem);
 }
 
 .exc-h2 {
-  color: #777777;
+  color: #CCC;
   font-size: clamp(1.5rem, 1.5rem, 1.5rem);
+}
+
+.exc-h3 {
+  font-size: clamp(1.45rem, 1.45rem, 1.45rem);
+  color: #ec8c8c;
+}
+
+.exc-h3:visited {
+  color: #a02121;       /* visited link */
+}
+
+.exc-h3:hover {
+  color: #ca7c7c;           /* hover */
+}
+
+.exc-h3:active {
+  color: #da5959;        /* while clicking */
+}
+
+.exc-borderless {
+  margin-bottom: 0px;
+  border-bottom: 0px;
 }
 
 .exc-info {
@@ -31,7 +72,7 @@ body {
 
 .exc-text {
   font-size: clamp(1.25rem, 1.25rem, 1.25rem);
-  color: #757575;
+  color: #BBB;
 }
 
 ul.exc-inline {
