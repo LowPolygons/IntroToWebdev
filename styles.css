@@ -4,6 +4,7 @@ body {
   background-repeat: no-repeat;
   background-color: #000;
   background-size: cover;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -44,7 +45,7 @@ main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .exc-container {
