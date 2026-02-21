@@ -5,6 +5,7 @@
   <title>Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="email_styles.css">
 </head>
 
 <body>
@@ -30,30 +31,43 @@
 
   <!-- Utilise Section, Aside, etc-->
   <main>
-    <div class="Excision exc-info exc-separators">
+    <section class="Excision exc-info exc-separators">
       <a class="exc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia sagittis quam, quis consectetur odio tempus vel. Vestibulum nec diam venenatis, consequat ex in, hendrerit justo. Aliquam varius fermentum augue, quis tincidunt purus ultricies sit amet. Nulla vulputate neque nibh, ac pretium augue pretium eget. Suspendisse tempus varius quam placerat pharetra. Etiam sodales quam ut nibh tempor consequat. Ut id convallis arcu. Etiam at vestibulum nulla.
 
       Phasellus luctus lorem in porttitor laoreet. Nam laoreet ex sit amet iaculis interdum. Sed eu sapien blandit ipsum accumsan posuere. Vestibulum non facilisis magna. Duis blandit, nunc sit amet commodo semper, nisi mi consectetur augue, ut facilisis felis sapien eget nibh. Integer ultricies quis orci quis varius. In ut imperdiet elit, id blandit velit. Sed vestibulum nulla erat, eget ullamcorper lacus convallis at. In feugiat scelerisque convallis. Nunc vel enim non nunc vehicula eleifend. Vivamus ac mollis arcu. Morbi congue lectus quis vestibulum mattis. Duis volutpat est sed lacus ultricies tempor.</a>
-    </div>
+    </section>
 
-    <div class="exc-container">
+
+    <section class="email-submit">
+      <label class="block" for="fname2">First Name:</label>
+      <input class="block" type="text" data-field="firstName"/>
+      <label class="block" for="lname2">Surname:</label>
+      <input class="block" type="text" data-field="lastName"/>
+      <label class="block" for="email2">Email:</label>
+      <input class="block" type="email" data-field="email"/>
+      <button class="block" type="submit">Submit</button>
+      <p class="block email-status"></p>
+      </section>
+    <script src="email.js"></script>
+
+    <section class="exc-container">
       <div class="exc-box">
         <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"/>
-        <a class="exc-text">Test1</a>
+        <a class="exc-text">Test 1</a>
       </div>
       <div class="exc-box">
         <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"/>
-        <a class="exc-text">Test1</a>
+        <a class="exc-text">Test 2</a>
       </div>
       <div class="exc-box">
         <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"/>
-        <a class="exc-text">Test1</a>
+        <a class="exc-text">Test 3</a>
       </div>
       <div class="exc-box">
         <img src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"/>
-        <a class="exc-text">Test1</a>
+        <a class="exc-text">Test 4</a>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>

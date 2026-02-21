@@ -1,0 +1,55 @@
+.email-submit {
+    display: grid;
+    margin: 1.5vw;
+
+    background-color:  #444444F0;
+    outline-color: #c33c3c99;
+    outline-style: solid;
+
+    padding: 0.3rem;
+
+    --component-min-width: 195px;
+    --component-target-width: 16vw;
+    --component-max-width: 500px;
+
+    width: clamp(
+        var(--component-min-width), 
+        var(--component-target-width), 
+        var(--component-max-width)
+    );
+}
+
+.email-submit button {
+    width: 45%;
+    background-color: #55555511;
+    text-align: center;
+    justify-self: center;
+    cursor: pointer;
+    color: #ccc;
+}
+
+
+.email-submit input {
+    color: #ccc;
+    width: 85%;
+    background-color: #55555511;
+    justify-self: center;
+}
+
+.email-submit .block {
+    display: block;
+    margin: 0.35rem;
+}
+
+.email-submit .email-status {
+    text-align: center;
+    text-decoration: double;
+    justify-self: center;
+    
+    --success-colour: #5fd198;
+    --failure-colour: #d46666;
+}
+
+.email-submit .form-invalid {
+    background-color: #743636;
+} 
