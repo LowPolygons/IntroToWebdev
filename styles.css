@@ -5,6 +5,11 @@ body {
   background-color: #000;
   background-size: cover;
   box-sizing: border-box;
+
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
 
 html, body {
@@ -22,10 +27,13 @@ main {
   background-color: #444444aa;
 }
 
-.exc-head {
+.exc-head { 
   text-align: center; 
   padding-bottom: 4vh;
   padding-top: 4vh;
+
+  outline-color: #220b0b;
+  outline-style: solid;
 }
 
 .exc-separators {
@@ -41,11 +49,14 @@ main {
 .exc-nav {
   background-color: #444444bb;
   padding-top: 1.5vh;
-  padding-bottom: 1.5vh;
+  padding-bottom: 1.5vh; 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
   width: 100%;
+
+  outline-color: #220b0b;
+  outline-style: solid;
 }
 
 .exc-container {
@@ -54,11 +65,18 @@ main {
   grid-auto-flow: column;
   grid-auto-columns: minmax(250px, 25%);
   overflow-x: auto;
+
+  outline-color: #220b0b;
+  outline-style: solid;
+
+  background-color: #555555BB;
 }
 
 .exc-container img {
   max-inline-size: 100%;
   block-size: auto;
+  outline-color: #000000;
+  outline-style: solid;
 }
 
 
@@ -87,15 +105,15 @@ main {
 }
 
 .exc-h3:visited {
-  color: #a02121;       /* visited link */
+  color: #c95959;       /* visited link */
 }
 
 .exc-h3:hover {
-  color: #ca7c7c;           /* hover */
+  color: #ffcece;           /* hover */
 }
 
 .exc-h3:active {
-  color: #da5959;        /* while clicking */
+  color: #dd4343;        /* while clicking */
 }
 
 .exc-borderless {
@@ -104,18 +122,22 @@ main {
 }
 
 .exc-info {
-  background-color: #533535;
+  background-color: #424242dd;
   padding-left: 4vw;
   padding-right: 4vw;
   padding-top: 1vh;
   padding-bottom: 1vh;
   text-align: justify;
+
+  outline-color: #220b0b;
+  outline-style: solid;
 }
 
 .exc-text {
   font-size: clamp(1.25rem, 1.25rem, 1.25rem);
   color: #BBB;
 }
+
 
 ul.exc-inline {
   list-style: none;
@@ -128,9 +150,9 @@ ul.exc-inline li {
 }
 
 ul.exc-inline li::after {
-  content: " - ";
+  content: " | ";
 }
 
 ul.exc-inline li:first-child::before {
-  content: " - ";
+  content: " | ";
 }
