@@ -37,7 +37,15 @@ document.querySelectorAll(".email-submit").forEach((form) => {
                 body: JSON.stringify(post_request_data) 
             });
 
+            if (response.status == 400) {
+                status.innerText = "Your inputs were rejected, please try again";
+                status.style.color = status_style.getPropertyValue("--failure-colour");
+                return;
+            }
+
             if (response.ok) {
+                console.log(response.status)
+
                 const data = await response.json();
 
                 console.log(JSON.stringify(data));
@@ -45,10 +53,11 @@ document.querySelectorAll(".email-submit").forEach((form) => {
                 status.innerText = data.message;
                 status.style.color = status_style.getPropertyValue("--success-colour");
             }
+
+            return;
         } catch (err) {
             console.log("Failed: ", err);
         }
-
     })
 });
 
@@ -59,6 +68,7 @@ function validate_input_for_email_signup(first_name, last_name, email) {
         item.classList.remove("form-invalid");
     });
 
+    // TODO: remove this eventually, it was just for testing regexs
     const name_regex = /^[A-Z]{1}[a-z]+$/;
     // https://emailregex.com/index.html
     const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
