@@ -1,17 +1,29 @@
 document.querySelectorAll(".email-submit").forEach((form) => {
     form.addEventListener("submit", async (event) => {
         event.preventDefault(); 
-        const success = validateInputs(form);
 
         const status = form.querySelector(".email-status");
         const status_style = getComputedStyle(status);
-        const firstNameInput = form.querySelector('input[data-field="firstName"]');
-        const lastNameInput = form.querySelector('input[data-field="lastName"]');
-        const emailInput = form.querySelector('input[data-field="email"]');
+        
+        const first_name = form.querySelector('input[data-field="firstName"]');
+        const last_name = form.querySelector('input[data-field="lastName"]');
+        const email = form.querySelector('input[data-field="email"]');
+
+        const any_errors = validate_input_for_email_signup(first_name, last_name, email);
+
+        if (any_errors.length == 0) {
+            status.innerText = "Please wait.."
+            status.style.color = status_style.getPropertyValue("--success-colour");
+        } else {
+            status.innerText = any_errors.map((err) => err.trim()).join("\n");
+            status.style.color = status_style.getPropertyValue("--failure-colour");
+
+            return;
+        }
 
         const post_request_data = {
-            name: firstNameInput.value.trim().concat(lastNameInput.value.trim()),
-            email: emailInput.value.trim()
+            name: first_name.value.trim().concat(last_name.value.trim()),
+            email: email.value.trim()
         };
 
         try {
@@ -25,41 +37,25 @@ document.querySelectorAll(".email-submit").forEach((form) => {
                 body: JSON.stringify(post_request_data) 
             });
 
-            const result = await response.text();
-            console.log(result);
+            if (response.ok) {
+                const data = await response.json();
 
-            console.log("respond received!");
+                console.log(JSON.stringify(data));
 
-            // if (response.status == 200) { 
-            //     status.innerText = "Successful post";
-            //     status.style.color = status_style.getPropertyValue("--success-colour");
-            //     return;
-            // }
-            //
-            // status.innerText = response.errors;
-            // status.style.color = status_style.getPropertyValue("--failure-colour");
-            //
+                status.innerText = data.message;
+                status.style.color = status_style.getPropertyValue("--success-colour");
+            }
         } catch (err) {
             console.log("Failed: ", err);
-            //
-            // status.innerText = err;
-            // status.style.color = status_style.getPropertyValue("--failure-colour");
         }
 
     })
 });
 
-function validateInputs(form) { 
-    const status = form.querySelector(".email-status");
-    const status_style = getComputedStyle(status);
-
-    const firstNameInput = form.querySelector('input[data-field="firstName"]');
-    const lastNameInput = form.querySelector('input[data-field="lastName"]');
-    const emailInput = form.querySelector('input[data-field="email"]');
-
+function validate_input_for_email_signup(first_name, last_name, email) {
     let errors = [];
 
-    ([firstNameInput, lastNameInput, emailInput]).forEach((item) => {
+    ([first_name, last_name, email]).forEach((item) => {
         item.classList.remove("form-invalid");
     });
 
@@ -67,23 +63,20 @@ function validateInputs(form) {
     // https://emailregex.com/index.html
     const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-    if (!firstNameInput.value.trim().match(name_regex)) {
+    if (!first_name.value.trim().match(name_regex)) {
         errors.push("Please enter a First Name");
-        firstNameInput.classList.add("form-invalid");
+        first_name.classList.add("form-invalid");
     }
 
-    if (!lastNameInput.value.trim().match(name_regex)) {
+    if (!last_name.value.trim().match(name_regex)) {
         errors.push("Please enter a Surname");
-        lastNameInput.classList.add("form-invalid");
+        last_name.classList.add("form-invalid");
     }
 
-    if (!emailInput.value.trim().match(email_regex)) {
+    if (!email.value.trim().match(email_regex)) {
         errors.push("Please enter a valid email");
-        emailInput.classList.add("form-invalid");
+        email.classList.add("form-invalid");
     }
 
-    status.innerText = errors.length ? errors.join("\n") : "Form submitted successfully!";
-    status.style.color = errors.length ? status_style.getPropertyValue("--failure-colour") : status_style.getPropertyValue("--success-colour");
-
-    return errors.length ? false : true;
+    return errors;
 }
