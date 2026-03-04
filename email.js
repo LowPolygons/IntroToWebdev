@@ -68,17 +68,15 @@ function validate_input_for_email_signup(first_name, last_name, email) {
         item.classList.remove("form-invalid");
     });
 
-    // TODO: remove this eventually, it was just for testing regexs
-    const name_regex = /^[A-Z]{1}[a-z]+$/;
     // https://emailregex.com/index.html
     const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-    if (!first_name.value.trim().match(name_regex)) {
+    if (!first_name.value.trim()) {
         errors.push("Please enter a First Name");
         first_name.classList.add("form-invalid");
     }
 
-    if (!last_name.value.trim().match(name_regex)) {
+    if (!last_name.value.trim()) {
         errors.push("Please enter a Surname");
         last_name.classList.add("form-invalid");
     }

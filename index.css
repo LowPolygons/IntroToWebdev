@@ -1,4 +1,12 @@
+:root  {
+  --front-page-background-colour: #444444aa;
+}
+
 body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
   background-image: url(https://excision.ca/wp-content/uploads/2023/12/Excision_Tour_Dates.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -12,19 +20,62 @@ body {
   font-style: normal;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+
+.signup-and-info {
+  background-color: var(--front-page-background-colour);
+  display: flex;
+  flex-direction: row;
+  
+  padding-top: 3vh;
+  padding-bottom: 3vh;
 }
 
-main {
-  min-height: 100vh;
+.signup-and-info aside {
+  outline-color: #220b0b;
+  outline-style: solid;
+
+  padding-top: 3vh;
+  text-align: center;
+
+  background-color: var(--front-page-background-colour);
 }
 
-.Excision {
-  background-color: #444444aa;
+.signup-and-info section { 
+  outline-color: #220b0b;
+  outline-style: solid;
+
+  align-items: center;
+}
+
+/*
+Source - https://stackoverflow.com/a/37178061
+Posted by abalter, modified by community. See post 'Timeline' for change history
+Retrieved 2026-03-02, License - CC BY-SA 4.0
+*/
+
+
+footer {
+  margin-top: 5vh;
+
+  background-color: var(--front-page-background-colour);
+  outline-color: #000;
+  outline-style: solid;
+
+  text-align: center;
+  
+  padding: 3px;
+}
+
+footer .big {
+  font-size: large;
+}
+
+footer .small {
+  font-size: small;
+}
+
+body header {
+  background-color: var(--front-page-background-colour);
 }
 
 .exc-head { 
@@ -47,11 +98,11 @@ main {
 }
 
 .exc-nav {
-  background-color: #444444bb;
+  background-color: var(--front-page-background-colour);
   padding-top: 1.5vh;
   padding-bottom: 1.5vh; 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   text-align: center;
   width: 100%;
 
@@ -96,11 +147,11 @@ main {
 
 .exc-h2 {
   color: #CCC;
-  font-size: clamp(1.5rem, 1.5rem, 1.5rem);
+  font-size: 1.5rem;
 }
 
 .exc-h3 {
-  font-size: clamp(1.45rem, 1.45rem, 1.45rem);
+  font-size: 1.45rem;
   color: #ec8c8c;
 }
 
@@ -123,14 +174,13 @@ main {
 
 .exc-info {
   background-color: #424242dd;
-  padding-left: 4vw;
-  padding-right: 4vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
   text-align: justify;
-
-  outline-color: #220b0b;
-  outline-style: solid;
+  
+  align-items: center;
 }
 
 .exc-text {
