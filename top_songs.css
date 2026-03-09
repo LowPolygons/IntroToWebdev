@@ -1,0 +1,28 @@
+body {
+    background-color: #333333;
+    background-blend-mode: overlay;
+}
+
+/* 5 Items so need to adjust the max-widths */
+.exc-nav .button-container {
+  @media (max-width: 670px) {
+    margin-left: 0vw;
+    margin-right: 0vw;
+  }
+}
+.exc-nav {
+  @media (max-width: 450px) {
+    flex-wrap: wrap;
+  }
+}
+
+.exc-nav .nav-button {
+  /* ~790px is when the text in the nav bar starts to wrap*/
+  @media (max-width: 1020px) {
+    height: 5.5rem;
+  }
+  /* ~560 is when it wraps again */
+  @media (max-width: 800px) {
+    height: 7.5rem;
+  }
+}
