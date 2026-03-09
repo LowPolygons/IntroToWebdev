@@ -105,14 +105,11 @@ body {
 }
 
 .signup-and-info aside {
+  padding-top: 1rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*
-  outline-color: #220b0b;
-  outline-style: solid;
-  background-color: var(--front-page-background-colour);
-  */
 
   /* TODO: Separate text-align concerns from overriding the emial form */
   text-align: center;
@@ -124,13 +121,6 @@ body {
 
   align-items: center;
 }
-
-/*
-Source - https://stackoverflow.com/a/37178061
-Posted by abalter, modified by community. See post 'Timeline' for change history
-Retrieved 2026-03-02, License - CC BY-SA 4.0
-*/
-
 
 footer {
   margin-top: 5vh;
@@ -225,18 +215,6 @@ body header {
   color: #ec8c8c;
 }
 
-/*
-.exc-h3:visited {
-  color: #c95959;      
-}
-
-.exc-h3:hover {
-  color: #ffcece;          
-
-.exc-h3:active {
-  color: #dd4343;        
-}
-*/
 .exc-borderless {
   margin-bottom: 0px;
   border-bottom: 0px;
@@ -257,7 +235,6 @@ body header {
   font-size: clamp(1.25rem, 1.25rem, 1.25rem);
   color: #BBB;
 }
-
 
 ul.exc-inline {
   list-style: none;
