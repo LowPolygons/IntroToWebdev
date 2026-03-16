@@ -4,8 +4,18 @@ Top Songs Webpage Adjustments
 body {
     background-color: #333333;
     background-blend-mode: overlay;
+    background-image: url(https://premieredm.com/wp-content/uploads/2022/07/44bc1-272033376_486634536156055_3888387924903397910_n.jpg);
 }
 
+.exc-h3 {
+  color: #286e8f;
+}
+
+.exc-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* 5 Items so need to adjust the max-widths */
 .exc-nav .button-container {
   @media (max-width: 670px) {
@@ -33,17 +43,48 @@ body {
 .song-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .song-container {
-    width: 100vw;
+    width: 60vw;
     outline-style: solid;
     outline-color: black;
 
-    background-color: #333333;
+    background-color: #333333DE;
 
     display: flex;
     flex-direction: row;
+
     justify-content: center;
 
     padding: 2vw;
+
+    @media(max-width: 600px) {
+      flex-direction: column;
+    }
+}
+
+.song-container * {
+  margin-left: 0.6vw;
+  margin-right: 0.6vw;
+
+  margin-top: 0.2vh;
+  margin-bottom: 0.2vh;
+}
+
+.song-container img {
+  border-style: solid;
+  border-radius: 8%;
+  border-color: #111;
+
+  max-width: 100%;
+  height: auto;
+}
+
+.song-container p {
+align-self: center;
+padding: 3vw;
+
+background-color: #222;
+border-radius: 5%;
 }

@@ -202,7 +202,7 @@ body header {
 
 .exc-h1 {
   color: #DDD;
-  font-size: clamp(3rem, 5rem, 6rem);
+  font-size: clamp(2rem, 3rem, 4rem);
 }
 
 .exc-h2 {
