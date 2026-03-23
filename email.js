@@ -43,9 +43,7 @@ document.querySelectorAll(".email-submit").forEach((form) => {
                 return;
             }
 
-            if (response.ok) {
-                console.log(response.status)
-
+            if (response.status == 200) {
                 const data = await response.json();
 
                 console.log(JSON.stringify(data));

@@ -1,3 +1,156 @@
 body {
     background-image: url(https://festival101.co.za/wp-content/uploads/2023/02/327724318_1275266773394148_4724199194559407425_n.jpg);
 }
+
+.exc-h3 {
+  color: #b45700;
+}
+
+.album-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    outline-style: solid;
+    outline-color: #b4570055;
+
+    background-color: #222222;
+    padding-left: 3vw;
+    padding-right: 3vw;
+
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 50vw;
+
+    text-align: center;
+}
+
+.album-container * {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.album-container img {
+    max-width: 60%;
+    height: auto;
+}
+
+.album-container img:hover {
+    filter: brightness(1.25);
+}
+
+.album-container img:active {
+    filter: brightness(0.8);
+}
+
+.album-container p {
+align-self: center;
+padding: 3vw;
+
+background-color: #333;
+border-radius: 5%;
+font-size: 2rem;
+color: #b45700;
+}
+
+#selected-album-song-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #000000BB; 
+  
+  display: none; 
+
+  z-index: 9999; 
+
+  text-align: center;
+}
+
+#popup-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: #444444;
+  padding: 1vw;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popup-body-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 2vh;
+}
+
+#popup-body-data #chosen-album {
+    font-size: 1.6rem;
+    color: #ffd9b5;
+
+    padding: 1.5vh;
+    background-color: #404040;
+}
+
+#popup-body button {
+    width: 45%;
+    background-color: #55555511;
+    text-align: center;
+    justify-self: center;
+    cursor: pointer;
+    color: #ff7b00;
+    font-size: 1.12rem;
+}
+
+.table-header {
+    color: #ff7b00;
+    text-align: left;
+    font-size: 1.25rem;
+
+    text-decoration: underline;
+}
+
+tr {
+    padding-bottom: 3vh;
+    background-color: #404040;
+}
+
+.td_or_tr {
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-top: 0.75vh;
+    padding-bottom: 0.25vh;
+}
+
+table {
+    background-color: #383838;
+}
+
+.table-row-text {
+    color: #b45700;
+}
+
+.table-row-song-name {
+    text-align: left;
+}
+
+.table-row-song-runtime {
+    text-align: right;
+}
