@@ -43,7 +43,11 @@ function format_band_to_html(data) {
     const new_image_info = document.createElement("div");
     new_image_info.classList.add("image-info");
     /**/ const image = document.createElement("img");
-    /**/ image.setAttribute("src", image_data.source);
+    /**/ image.src = image_data.source;
+    /**/ image.onerror = () => {
+            image.onerror = null;
+            image.src = "question_mark.png";
+         };
     /**/ image.setAttribute("loading", "lazy");
     /**/ image.setAttribute("alt", image_data.title);
     new_image_info.appendChild(image);
