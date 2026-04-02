@@ -44,6 +44,7 @@ function format_band_to_html(data) {
     new_image_info.classList.add("image-info");
     /**/ const image = document.createElement("img");
     /**/ image.setAttribute("src", image_data.source);
+    /**/ image.setAttribute("loading", "lazy");
     /**/ image.setAttribute("alt", image_data.title);
     new_image_info.appendChild(image);
     new_content.appendChild(new_image_info);
