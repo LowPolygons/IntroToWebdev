@@ -1,0 +1,76 @@
+body {
+    background-color: #666;
+    background-image: none;
+}
+
+.exc-h3 {
+    color: #BBB;
+}
+
+.exc-logo {
+  max-inline-size: 25%;
+  align-self: center;
+}
+
+main {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    outline-style:  solid;
+    outline-color: black;
+
+    background-color: #222222;
+}
+
+.year-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+
+    justify-content: center;
+}
+
+.year-container * {
+    padding-left: 1vw;
+}
+
+.hall-of-fame-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hall-of-fame-container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    width: 75%;
+    
+    align-self: center;
+
+    padding: 2vw;
+    background-color: #666;
+    outline-style: solid;
+    outline-color: #000;
+}
+
+.hall-of-fame-container div {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.list-of-inductors {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.list-of-inductors a {
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}

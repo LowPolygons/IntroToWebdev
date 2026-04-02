@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Excision Fan Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="hall_of_fame.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="exc-head exc-separators">
+    <a href="index.html"><img class="exc-logo" src="front_page_logo.png" /></a>
+    <p class="exc-h1">Rock and Roll Hall of Fame</p>
+
+    <div class="year-container">
+      <p class="exc-h1">In the Year of</p>
+      <p class="exc-h1" id="hall-of-fame-year"></p>
+    </div>
+  </header>
+  
+  <nav class="exc-separators exc-nav">
+    <button class="nav-button button-container" onclick="history.back()">
+      <a class="exc-h3">Back</a>
+    </button>
+    <form action="hall_of_fame.html" class="button-container">
+      <button class="nav-button" type="submit">
+        <a class="exc-h3">Hall Of Fame</a>
+      </button>
+    </form>
+
+    <form action="top_songs.html" class="button-container">
+      <button class="nav-button">
+        <a class="exc-h3">Top Songs</a>
+      </button>
+    </form>
+
+    <form action="top_albums.html" class="button-container">
+      <button class="nav-button">
+        <a class="exc-h3">Top Albums</a>
+      </button>
+    </form>
+  </nav>
+
+  <main>
+    <script src="hall_of_fame.js"></script>
+    <div id="hall-of-fame-content" class="hall-of-fame-content-container">
+      <content class="hall-of-fame-container">
+        <div class="image-info">
+          <img src="data:image/jpeg;base64,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" alt="TEST" /> 
+        </div>
+        <div class="band-info">
+          <a href="https://www.wikepedia.com/" class="exc-h3">Band Title</a>
+        </div>
+        <div class="inducted-members">
+          <ul>
+            <p class="exc-h3">Member 1</p>
+            <p class="exc-h3">Member 2</p>
+            <p class="exc-h3">Member 3</p>
+          </ul>
+        </div>
+        <div class="inducted-by">
+          <p class="exc-h3">Name Of Inducter</p>
+          <p class="exc-h4">Information on inductor</p>
+        </div>
+      </content>
+    </div>
+  </main>
+
+  <footer>
+    <p class="big exc-text">&copy; 2026 Introduction to Web Development Assignment</p>
+    <p class="small exc-text">Trademarked by absolutely no one</p>
+  </footer>
+</body>
+
+</html>
