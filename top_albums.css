@@ -17,6 +17,8 @@ body {
     flex-direction: row;
     align-items: center;
 
+    justify-content: space-between;
+
     outline-style: solid;
     outline-color: #b4570055;
 
@@ -32,6 +34,10 @@ body {
     width: 50vw;
 
     text-align: center;
+
+  @media(max-width: 890px) {
+    flex-direction: column;
+  }
 }
 
 .album-container * {
@@ -53,13 +59,25 @@ body {
 }
 
 .album-container p {
-align-self: center;
-padding: 3vw;
+    margin: 0 auto;
+    align-self: center;
+    padding: 3vw;
 
-background-color: #333;
-border-radius: 5%;
-font-size: 2rem;
-color: #b45700;
+    background-color: #333;
+    border-radius: 5%;
+    color: #b45700;
+
+    font-size: 2rem;
+
+    @media (max-width: 1520px) {
+        font-size: 1.75rem;
+    }
+    @media (max-width: 1325px) {
+        font-size: 1.4rem;
+    }
+    @media (max-width: 1060px) {
+        font-size: 1.25rem;
+    }
 }
 
 #selected-album-song-list {

@@ -41,27 +41,27 @@ body {
 }
 
 .song-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .song-container {
-    width: 60vw;
-    outline-style: solid;
-    outline-color: black;
+  width: 60vw;
+  outline-style: solid;
+  outline-color: black;
 
-    background-color: #333333DE;
+  background-color: #333333DE;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    justify-content: center;
+  justify-content: center;
 
-    padding: 2vw;
+  padding: 2vw;
 
-    @media(max-width: 600px) {
-      flex-direction: column;
-    }
+  @media(max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 .song-container * {
@@ -82,9 +82,9 @@ body {
 }
 
 .song-container p {
-align-self: center;
-padding: 3vw;
+  align-self: center;
+  padding: 3vw;
 
-background-color: #222;
-border-radius: 5%;
+  background-color: #222;
+  border-radius: 5%;
 }
