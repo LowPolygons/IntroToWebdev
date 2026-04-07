@@ -49,7 +49,7 @@ main {
 
     justify-content: center;
 
-    width: 60%;
+    width: 75%;
     
     align-self: center;
 
@@ -57,6 +57,12 @@ main {
     background-color: #666;
     outline-style: solid;
     outline-color: #000;
+
+    @media (max-width: 1150px) {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
 }
 
 .hall-of-fame-container div {
@@ -65,15 +71,14 @@ main {
 }
 
 .list-of-inductors {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    text-align: left;
+    vertical-align: center;
 }
 .list-of-inductors a {
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
 }
+
 .image-info {
     max-width: 25%;
     display: flex;

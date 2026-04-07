@@ -111,14 +111,16 @@ function format_band_to_html(data) {
     // -    - a with href of the url and name of the name
     const new_inducted_members = document.createElement("div");
     new_inducted_members.classList.add("inducted-members");
-    /**/ const ul_tag = document.createElement("div");
+    /**/ const ul_tag = document.createElement("ul");
     /**/ ul_tag.classList.add("list-of-inductors");
     /**/ for (const member of inducted_members_data) {
+    /**/    const list_item = document.createElement("li");
     /**/    const local_a_tag = document.createElement("a")
     /**/    local_a_tag.setAttribute("href", member.url);
     /**/    local_a_tag.classList.add("exc-h3");
     /**/    local_a_tag.innerHTML = member.name;
-    /**/    ul_tag.appendChild(local_a_tag);
+    /**/    list_item.appendChild(local_a_tag);
+    /**/    ul_tag.appendChild(list_item);
     /**/ }
     /**/ new_inducted_members.appendChild(ul_tag);
     if (inducted_members_data.length != 0) {
