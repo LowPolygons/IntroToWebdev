@@ -47,21 +47,21 @@ main {
     display: flex;
     flex-direction: row;
 
-    justify-content: space-between;
+    justify-content: center;
 
-    width: 75%;
+    width: 60%;
     
     align-self: center;
 
-    padding: 2vw;
+    padding: 1.5vw;
     background-color: #666;
     outline-style: solid;
     outline-color: #000;
 }
 
 .hall-of-fame-container div {
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .list-of-inductors {
@@ -74,7 +74,23 @@ main {
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
 }
+.image-info {
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #444;
+}
 .image-info img {
-    max-width: 40%;
+    max-width: 25vw;
+    width: auto;
     height: auto;
+}
+
+.band-info {
+    background-color: #555;
+}
+
+.inducted-by {
+    background-color: #777;
 }

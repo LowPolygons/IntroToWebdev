@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", on_page_load);
 
-async function get_request(year = "1999") {
+async function get_request(year) {
     const response_data = await fetch("https://mudfoot.doc.stu.mmu.ac.uk/ash/api/halloffame?year=" + year)
     .then(response => {
         if (!response.ok) {
@@ -12,10 +12,47 @@ async function get_request(year = "1999") {
     return response_data;
 }
 
-async function on_page_load() {
-    const response_data = await get_request("1999");
+function populate_options() {
+    const year_range = [2021, 1986];
 
-    console.log(response_data);
+    const select_menu = document.getElementById("hof-year");
+
+    for (let i = year_range[0]; i >= year_range[1]; i--) {
+        const new_option = document.createElement("option");
+        new_option.setAttribute("value", i.toString());
+        new_option.innerHTML = i.toString();
+
+        select_menu.appendChild(new_option);
+    }
+
+    select_menu.disabled = false;
+}
+
+// TODO - cleanup repeated code
+async function load_new_year() {
+    const select_menu = document.getElementById("hof-year");
+
+    const response_data = await get_request(select_menu.value.toString());
+
+    const year_container = document.getElementById("hall-of-fame-year");
+    year_container.innerHTML = response_data.year;
+
+    const content_container = document.getElementById("hall-of-fame-content");
+
+    // Clear content container
+    while (content_container.firstChild) {
+        content_container.removeChild(content_container.lastChild);
+    }
+
+    for (const object of response_data.data) {
+        const new_obj = format_band_to_html(object);
+        console.log(new_obj);
+        content_container.appendChild(new_obj);
+    }
+}
+
+async function on_page_load() {
+    const response_data = await get_request("2021");
 
     const year_container = document.getElementById("hall-of-fame-year");
     year_container.innerHTML = response_data.year;
@@ -27,6 +64,10 @@ async function on_page_load() {
         console.log(new_obj);
         content_container.appendChild(new_obj);
     }
+
+    // Give text box year options only if javascript is successfully loaded
+    populate_options()
+
 }
 
 function format_band_to_html(data) {

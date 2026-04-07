@@ -47,6 +47,13 @@
   </nav>
 
   <main>
+    <div class="choose-year">
+      <label class="block exc-text">Choose a Year:</label>
+      <select name="hof-year" id="hof-year" disabled="true"></select>
+
+      <button onclick="load_new_year()">Refresh</button>
+      <p class="block email-status"></p>
+    </div>
     <script src="hall_of_fame.js"></script>
     <div id="hall-of-fame-content" class="hall-of-fame-content-container">
     </div>
