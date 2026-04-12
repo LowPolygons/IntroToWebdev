@@ -49,7 +49,8 @@ main {
 
     justify-content: center;
 
-    width: 75%;
+    min-width: 55%;
+    max-width: 85%;
     
     align-self: center;
 
@@ -58,7 +59,7 @@ main {
     outline-style: solid;
     outline-color: #000;
 
-    @media (max-width: 1150px) {
+    @media (max-width: 1870px) {
         flex-direction: column;
         align-items: center;
         width: 50%;
@@ -70,6 +71,12 @@ main {
     padding-right: 2vw;
 }
 
+.inducted-members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .list-of-inductors {
     text-align: left;
     vertical-align: center;
@@ -77,6 +84,7 @@ main {
 .list-of-inductors a {
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
+    height: 100%
 }
 
 .image-info {
@@ -94,8 +102,40 @@ main {
 
 .band-info {
     background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .inducted-by {
     background-color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year-choose-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose-year {
+    background-color: #555;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+
+    margin-bottom: 2vh;
+}
+
+.hof-title {
+    color: #252525;
+    padding: 1vw;
+    font-size: 1.5rem;
 }

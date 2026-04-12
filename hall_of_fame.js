@@ -70,6 +70,15 @@ async function on_page_load() {
 
 }
 
+function get_title_of_section(label) {
+    const title = document.createElement("p");
+    title.classList.add("hof-title");
+
+    title.innerHTML = label;
+
+    return title;
+}
+
 function format_band_to_html(data) {
     const image_data = data.image;
     const band_data = data.band;
@@ -98,6 +107,7 @@ function format_band_to_html(data) {
     // - a with class exc-h3 for band title and href to the url
     const new_band_info = document.createElement("div");
     new_band_info.classList.add("band-info");
+    new_band_info.appendChild(get_title_of_section("Band Name:"));
     /**/ const a_tag = document.createElement("a");
     /**/ a_tag.setAttribute("href", band_data.url);
     /**/ a_tag.classList.add("exc-h3");
@@ -111,6 +121,7 @@ function format_band_to_html(data) {
     // -    - a with href of the url and name of the name
     const new_inducted_members = document.createElement("div");
     new_inducted_members.classList.add("inducted-members");
+    new_inducted_members.appendChild(get_title_of_section("Inducted Members:"))
     /**/ const ul_tag = document.createElement("ul");
     /**/ ul_tag.classList.add("list-of-inductors");
     /**/ for (const member of inducted_members_data) {
@@ -132,6 +143,7 @@ function format_band_to_html(data) {
     if (Object.keys(inducted_by_data).length != 0 ) {
         const new_inducted_by = document.createElement("div");
         new_inducted_by.classList.add("inducted-by");
+        new_inducted_by.appendChild(get_title_of_section("Inducted By:"));
         /**/ const inducted_by_a_tag = document.createElement("a");
         /**/ inducted_by_a_tag.setAttribute("href", inducted_by_data.url);
         /**/ inducted_by_a_tag.classList.add("exc-h3");
