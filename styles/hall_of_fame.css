@@ -55,7 +55,7 @@ main {
     align-self: center;
 
     padding: 1.5vw;
-    background-color: #666;
+    background-color: #888;
     outline-style: solid;
     outline-color: #000;
 
@@ -75,6 +75,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: #666;
 }
 
 .list-of-inductors {
