@@ -96,7 +96,7 @@ function format_band_to_html(data) {
     /**/ image.src = image_data.source;
     /**/ image.onerror = () => {
             image.onerror = null;
-            image.src = "question_mark.png";
+            image.src = "/assets/question_mark.png";
          };
     /**/ image.setAttribute("loading", "lazy");
     /**/ image.setAttribute("alt", image_data.title);
