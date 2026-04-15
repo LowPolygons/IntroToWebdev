@@ -5,15 +5,26 @@ async function get_request(year) {
     .then(response => {
         if (!response.ok) {
             // Indicate on the page that it failed to load the data
-            throw new Error();
+            throw new Error("Failed to receive response from mudfoot");
+            return {};
         }
         return response.json();
     });
     return response_data;
 }
 
+function display_error(err) {
+    const year_container = document.getElementById("hall-of-fame-year");
+    const disable_on_error = document.getElementById("disable-on-error");
+
+    console.log("Failed: ", err);
+    year_container.innerHTML = "Something went wrong, Please refresh the page";
+    year_container.style.color = "#ff3c3c";
+    disable_on_error.innerHTML = "";
+}
+
 function populate_options() {
-    const year_range = [2021, 1986];
+    const year_range = [2021, 1977];
 
     const select_menu = document.getElementById("hof-year");
 
@@ -27,14 +38,22 @@ function populate_options() {
 
     select_menu.disabled = false;
 }
-
-// TODO - cleanup repeated code
 async function load_new_year() {
     const select_menu = document.getElementById("hof-year");
 
-    const response_data = await get_request(select_menu.value.toString());
+    try {
+        const response_data = await get_request(select_menu.value.toString());
 
-    load_based_on_response_data(response_data)
+        load_based_on_response_data(response_data);
+
+        const disable_on_error = document.getElementById("disable-on-error");
+        const year_container = document.getElementById("hall-of-fame-year");
+        year_container.style.removeProperty("color");
+
+        disable_on_error.innerHTML = "In the Year of";
+    } catch (err) {
+        display_error(err);
+    }
 }
 
 function load_based_on_response_data(response_data) {
@@ -56,9 +75,13 @@ function load_based_on_response_data(response_data) {
 }
 
 async function on_page_load() {
-    const response_data = await get_request("2021");
+    try {
+        const response_data = await get_request("2021");
 
-    load_based_on_response_data(response_data)
+        load_based_on_response_data(response_data);
+    } catch (err) {
+        display_error(err);
+    }
     
     // Give text box year options only if javascript is successfully loaded
     populate_options()
