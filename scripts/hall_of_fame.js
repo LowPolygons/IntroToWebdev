@@ -34,6 +34,10 @@ async function load_new_year() {
 
     const response_data = await get_request(select_menu.value.toString());
 
+    load_based_on_response_data(response_data)
+}
+
+function load_based_on_response_data(response_data) {
     const year_container = document.getElementById("hall-of-fame-year");
     year_container.innerHTML = response_data.year;
 
@@ -46,7 +50,7 @@ async function load_new_year() {
 
     for (const object of response_data.data) {
         const new_obj = format_band_to_html(object);
-        console.log(new_obj);
+        //console.log(new_obj);
         content_container.appendChild(new_obj);
     }
 }
@@ -54,20 +58,10 @@ async function load_new_year() {
 async function on_page_load() {
     const response_data = await get_request("2021");
 
-    const year_container = document.getElementById("hall-of-fame-year");
-    year_container.innerHTML = response_data.year;
-
-    const content_container = document.getElementById("hall-of-fame-content");
-
-    for (const object of response_data.data) {
-        const new_obj = format_band_to_html(object);
-        console.log(new_obj);
-        content_container.appendChild(new_obj);
-    }
-
+    load_based_on_response_data(response_data)
+    
     // Give text box year options only if javascript is successfully loaded
     populate_options()
-
 }
 
 function get_title_of_section(label) {
