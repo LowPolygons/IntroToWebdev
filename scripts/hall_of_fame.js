@@ -18,13 +18,13 @@ function display_error(err) {
     const disable_on_error = document.getElementById("disable-on-error");
 
     console.log("Failed: ", err);
-    year_container.innerHTML = "Something went wrong, Please refresh the page";
+    year_container.innerHTML = "Something went wrong, Please try again";
     year_container.style.color = "#ff3c3c";
     disable_on_error.innerHTML = "";
 }
 
 function populate_options() {
-    const year_range = [2021, 1977];
+    const year_range = [2021, 1966];
 
     const select_menu = document.getElementById("hof-year");
 
