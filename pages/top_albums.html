@@ -14,30 +14,24 @@
 
 <body>
   <header class="head separators">
-    <a href="/index.html"><img class="logo" src="/assets/front_page_logo.png" /></a>
-    <a class="exc-h1">Top Albums</h1>
+    <a href="/index.html"><img class="logo" src="/assets/front_page_logo.png" alt="Front Page Logo Image"/></a>
+    <a class="exc-h1">Top Albums</a>
     <a class="exc-h3"><i>(In my opinion)</i></a>
   </header>
 
   <nav class="separators exc-nav">
-    <button class="nav-button button-container" onclick="history.back()">
-      <a class="exc-h3">Back</a>
-    </button>
+    <button class="nav-button button-container exc-h3" onclick="history.back()">Back</button>
     <form action="/pages/hall_of_fame.html" class="button-container">
-      <button class="nav-button" type="submit">
-        <a class="exc-h3">Hall Of Fame</a>
-      </button>
+      <button class="nav-button exc-h3" type="submit">Hall Of Fame</button>
     </form>
 
     <form action="/pages/top_songs.html" class="button-container">
-      <button class="nav-button">
-        <a class="exc-h3">Top Songs</a>
+      <button class="nav-button exc-h3">Top Songs
       </button>
     </form>
 
     <form action="/pages/top_albums.html" class="button-container">
-      <button class="nav-button">
-        <a class="exc-h3">Top Albums</a>
+      <button class="nav-button exc-h3">Top Albums
       </button>
     </form>
 
@@ -54,36 +48,36 @@
       </div>
     </div>
 
-    <content id="album-list" class="album-list">
+    <section class="album-list">
       <div class="album-container">
         <img onclick="load_popup('codename-x')" src="https://i1.sndcdn.com/artworks-000105521982-20q7tc-t1080x1080.jpg" alt="Codename X Logo" /> 
         <p class="exc-h1">Codename X</p>
       </div>
-    </content>
-    <content id="album-list" class="album-list">
+    </section>
+    <section class="album-list">
       <div class="album-container">
         <img onclick="load_popup('apex')" src="https://i1.sndcdn.com/artworks-000389087844-pu3rvs-t1080x1080.jpg" alt="Apex Logo" /> 
         <p class="exc-h1">Apex</p>
       </div>
-    </content>
-    <content id="album-list" class="album-list">
+    </section>
+    <section class="album-list">
       <div class="album-container">
         <img onclick="load_popup('onyx')" src="https://cdn-images.dzcdn.net/images/cover/52b29bf32356514d8780672abb0e0c2a/0x1900-000000-80-0-0.jpg" alt="Onyx Logo" /> 
         <p class="exc-h1">Onyx</p>
       </div>
-    </content>
-    <content id="album-list" class="album-list">
+    </section>
+    <section class="album-list">
       <div class="album-container">
         <img onclick="load_popup('virus')" src="https://cdn-images.dzcdn.net/images/cover/f67abd9323dc652345232bc95d33590e/0x1900-000000-80-0-0.jpg" alt="Virus Logo" /> 
         <p class="exc-h1">Virus</p>
       </div>
-    </content>
-    <content id="album-list" class="album-list">
+    </section>
+    <section class="album-list">
       <div class="album-container">
         <img onclick="load_popup('x-rated')" src="https://i.scdn.co/image/ab67616d0000b2732138d8b02f714ab5b91dcf31" alt="X Rated Logo" /> 
         <p class="exc-h1">X Rated</p>
       </div>
-    </content>
+    </section>
   </main>
 
   <footer>

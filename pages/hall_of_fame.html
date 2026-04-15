@@ -14,7 +14,7 @@
 
 <body>
   <header class="head separators">
-    <a href="/index.html"><img class="logo" src="/assets/front_page_logo.png" /></a>
+    <a href="/index.html"><img class="logo" src="/assets/front_page_logo.png" alt="Front Page Logo Image"/></a>
     <p class="exc-h1">Rock and Roll Hall of Fame</p>
 
     <div class="year-container">
@@ -24,38 +24,32 @@
   </header>
   
   <nav class="separators exc-nav">
-    <button class="nav-button button-container" onclick="history.back()">
-      <a class="exc-h3">Back</a>
-    </button>
+    <button class="nav-button button-container exc-h3" onclick="history.back()">Back</button>
     <form action="/pages/hall_of_fame.html" class="button-container">
-      <button class="nav-button" type="submit">
-        <a class="exc-h3">Hall Of Fame</a>
-      </button>
+      <button class="nav-button exc-h3" type="submit">Hall Of Fame</button>
     </form>
 
     <form action="/pages/top_songs.html" class="button-container">
-      <button class="nav-button">
-        <a class="exc-h3">Top Songs</a>
+      <button class="nav-button exc-h3">Top Songs
       </button>
     </form>
 
     <form action="/pages/top_albums.html" class="button-container">
-      <button class="nav-button">
-        <a class="exc-h3">Top Albums</a>
+      <button class="nav-button exc-h3">Top Albums
       </button>
     </form>
   </nav>
 
   <main>
-    <content class="year-choose-content">
+    <section class="year-choose-content">
       <div class="choose-year">
         <label class="block exc-text">Choose a Year:</label>
-        <select name="hof-year" id="hof-year" disabled="true"></select>
+        <select name="hof-year" id="hof-year" disabled></select>
 
         <button onclick="load_new_year()">Refresh</button>
         <p class="block email-status"></p>
       </div>
-    </content>
+    </section>
     <script src="/scripts/hall_of_fame.js"></script>
     <div id="hall-of-fame-content" class="hall-of-fame-content-container">
     </div>

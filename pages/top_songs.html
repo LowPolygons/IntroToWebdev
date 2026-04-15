@@ -14,37 +14,31 @@
 
 <body>
   <header class="head separators">
-    <a href="/index.html"><img class="logo" src="/assets/front_page_logo.png" /></a>
-    <a class="exc-h1">Top Songs</h1>
+    <a href="/index.html"><img class="logo" src="/assets/front_page_logo.png" alt="Front Page Logo Image"/></a>
+    <a class="exc-h1">Top Songs</a>
     <a class="exc-h3"><i>(In my opinion)</i></a>
   </header>
 
   <nav class="separators exc-nav">
-    <button class="nav-button button-container" onclick="history.back()">
-      <a class="exc-h3">Back</a>
-    </button>
+    <button class="nav-button button-container exc-h3" onclick="history.back()">Back</button>
     <form action="/pages/hall_of_fame.html" class="button-container">
-      <button class="nav-button" type="submit">
-        <a class="exc-h3">Hall Of Fame</a>
-      </button>
+      <button class="nav-button exc-h3" type="submit">Hall Of Fame</button>
     </form>
 
     <form action="/pages/top_songs.html" class="button-container">
-      <button class="nav-button">
-        <a class="exc-h3">Top Songs</a>
+      <button class="nav-button exc-h3">Top Songs
       </button>
     </form>
 
     <form action="/pages/top_albums.html" class="button-container">
-      <button class="nav-button">
-        <a class="exc-h3">Top Albums</a>
+      <button class="nav-button exc-h3">Top Albums
       </button>
     </form>
 
   </nav>
 
   <main>
-    <content id="song-list" class="song-list">
+    <section id="song-list" class="song-list">
       <div class="song-container">
         <a href="https://www.youtube.com/watch?v=9COJCBMmjY0&list=RD9COJCBMmjY0">
           <img src="https://img.youtube.com/vi/9COJCBMmjY0/hqdefault.jpg" alt="Rumble - Excision & Space Laces on YouTube">
@@ -72,7 +66,7 @@
         </a>
         <p class="exc-h2">Live Wire</p>
       </div>
-    </content>
+    </section>
   </main>
 
   <footer> 
