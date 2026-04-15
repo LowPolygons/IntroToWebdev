@@ -55,6 +55,9 @@ document.querySelectorAll(".email-submit").forEach((form) => {
             return;
         } catch (err) {
             console.log("Failed: ", err);
+            status.innerText = "Something went wrong, please try again";
+            status.style.color = status_style.getPropertyValue("--failure-colour");
+            return;
         }
     })
 });

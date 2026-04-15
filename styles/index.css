@@ -147,27 +147,30 @@ body header {
   background-color: var(--front-page-background-colour);
 }
 
-.exc-head { 
+.head { 
   text-align: center; 
   padding-bottom: 4vh;
   padding-top: 4vh;
 
   outline-color: #220b0b;
   outline-style: solid;
+
+  display: flex;
+  flex-direction: column;
 }
 
 
-.exc-separators {
+.separators {
   margin-bottom: 1.25vh;
   margin-top: 1.25vh;
 }
 
-.exc-logo {
+.logo {
   max-inline-size: 50%;
   align-self: center;
 }
 
-.exc-logo .small {
+.logo .small {
   max-inline-size: 25%;
 }
 
