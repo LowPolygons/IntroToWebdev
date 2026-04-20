@@ -72,13 +72,13 @@ function validate_input_for_email_signup(first_name, last_name, email) {
     // https://emailregex.com/index.html
     const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-    if (!first_name.value.trim()) {
-        errors.push("Please enter a First Name");
+    // Ensure name fields aren't empty or contain numbers
+    if (!first_name.value.trim() || /\d/.test(first_name.value)) {
+        errors.push("Please enter a valid First Name");
         first_name.classList.add("form-invalid");
     }
-
-    if (!last_name.value.trim()) {
-        errors.push("Please enter a Surname");
+    if (!last_name.value.trim() || /\d/.test(last_name.value)) {
+        errors.push("Please enter a valid Surname");
         last_name.classList.add("form-invalid");
     }
 

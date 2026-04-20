@@ -27,3 +27,7 @@ On the Hall of Fame page, I intentionally let the textbox go outside the bounds 
 I am aware that it doesn't go earlier than 1986 or after 2021.
 
 This was a design choice to demonstrate error handling easier for the marker of this assignment.
+
+Across the pages I use classes with the prefix 'exc-'. If I were to redo this whole project, I would not include the 'exc-' infront of them.
+
+However, because it technically provides no disadvantages I have chosen to not replace them all.
