@@ -1,5 +1,7 @@
 # IntroToWebdev
 
+[Link to Github](https://github.com/LowPolygons/IntroToWebdev)
+
 To view the pages, run
 
 ```sh

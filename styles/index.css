@@ -112,7 +112,6 @@ body {
   flex-direction: column;
   align-items: center;
 
-  /* TODO: Separate text-align concerns from overriding the emial form */
   text-align: center;
 }
 
